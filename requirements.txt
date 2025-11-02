@@ -1,4 +1,4 @@
-telebot==4.29.1
+pyTelegramBotAPI==4.29.1
 googletrans==4.0.0-rc1
 python-dotenv==1.2.1
 wikipedia==1.4.0
