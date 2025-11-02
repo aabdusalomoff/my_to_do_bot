@@ -3,12 +3,15 @@ import logging
 from aiogram import Bot, Dispatcher, F
 from aiogram.filters import Command
 from aiogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
-from environs import Env
+import os
 from database import *
 
-env = Env()
-env.read_env()
-bot = Bot(token=env.str("TOKEN"))
+# ---- Загрузка токена ----
+TOKEN = os.getenv("TOKEN")
+if not TOKEN:
+    raise ValueError("❌ TELEGRAM_BOT_TOKEN не найден в .env")
+
+bot = Bot(token=TOKEN)
 dp = Dispatcher()
 
 # ---- Старт ----
