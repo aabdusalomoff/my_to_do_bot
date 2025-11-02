@@ -4,4 +4,3 @@ python-dotenv==1.2.1
 wikipedia==1.4.0
 aiogram==3.2.0
 environs==9.3.2
-
